@@ -1,0 +1,33 @@
+.header {
+    background-color: $color-base;
+    font-family: $ff-base;
+    position: sticky;
+    top: -1px;
+    z-index: 10;
+
+    &__navigation {
+        max-width: $width-base;
+        min-height: 74px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__list {
+        @include list;
+        display: flex;
+        margin-inline-end: 86px;
+        align-self: center;
+    }
+
+    &__link {
+        @include font(500, 14px, 18px);
+        text-decoration: none;
+        color: $color-black;
+        padding-inline-end: 34px;
+        transition: opacity 1s linear;
+    }
+
+    &__link:hover {
+        opacity: 0.75;
+    }
+}

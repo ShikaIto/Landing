@@ -1,0 +1,89 @@
+.beginning {
+    max-width: $width-base;
+    padding-inline-start: $indent;
+    display: flex;
+    justify-content: space-between;
+    font-family: $ff-base;
+
+    &__container {
+        width: 460px;
+    }
+
+    &__title {
+        @include font(700, 55px, 60px);
+        color: $color-black;
+        letter-spacing: -0.5px;
+        margin: 80px 0 0 0;
+    }
+
+    &__description {
+        @include font(400, 18px, 28px);
+        color: $color-black-light;
+        margin: 50px 0;
+        opacity: 0.7;
+    }
+
+    &__button {
+        padding: 0;
+        background-color: #24b47e;
+        @include size(180px, 50px, 4px);
+        @include font(600, 14px, 18px);
+        font-family: inherit;
+        color: #fff;
+        letter-spacing: 1px;
+        border: none;
+        background-image: linear-gradient(to left, transparent, transparent 50%, #319e75 50%, #319e75);
+        background-position: 100% 0;
+        background-size: 200% 100%;
+        transition: all 0.3s ease-in;
+    }
+
+    &__button:hover {
+        cursor: pointer;
+        background-position: 0 0;
+    }
+
+    &__cannon-container {
+        display: flex;
+        margin: 167px 0 0 0;
+    }
+
+    &__cannon {
+        @include font(400, 18px, 18px);
+        color: $color-black-light;
+        margin: 0 30px 0 0;
+    }
+
+    &__cannon-line {
+        @include size(132px, 2px, 0);
+        background-color: #d7d4d4;
+        align-self: center;
+    }
+
+    &__image-container {
+        position: relative;
+    }
+
+    &__image {
+        @include size(610px, 836px, 0);
+        margin-block-start: 20px;
+    }
+
+    &__sticky-container {
+        position: absolute;
+        top: 320px;
+        left: -200px;
+        @include size(430px, 370px, 0);
+    }
+
+    &__sticky {
+        position: sticky;
+        top: 73px;
+        @include size(340px, 260px, 0);
+        z-index: 1;
+        padding: 20px 50px;
+        border-radius: 20px;
+        background-color: $color-base;
+        box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+    }
+}

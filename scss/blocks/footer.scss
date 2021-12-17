@@ -1,0 +1,69 @@
+.footer {
+    font-family: $ff-base;
+    background-color: #efefef;
+    padding: 80px 120px 60px;
+
+    &__content {
+        max-width: $width-base;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        width: 229px;
+        @include font(600, 24px, 32px);
+        color: $color-black;
+        margin: 0 0 48px;
+    }
+
+    &__form {
+        margin-block-end: 85px;
+        width: 360px;
+        position: relative;
+    }
+
+    &__input {
+        @include size(340px, 50px, 4px);
+        font-family: inherit;
+        border: 1px solid rgba(199, 199, 199, 0.5);
+        background: transparent;
+        padding-inline-start: 20px;
+        @include font(500, 13px, 28px);
+        color: $color-black;
+    }
+
+    &__input:hover {
+        cursor: pointer;
+    }
+    &__input:focus {
+        outline: 1px solid rgba(199, 199, 199, 0.5);
+    }
+
+    &__input:focus ~ &__submit {
+        display: block;
+    }
+
+    &__submit {
+        position: absolute;
+        top: 11px;
+        right: 11px;
+        padding: 0;
+        background: none;
+        border: none;
+        font-family: inherit;
+        @include font(500, 13px, 28px);
+        color: $color-black;
+        display: none;
+        cursor: pointer;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        @include font(600, 14px, 20px);
+        color: #cfcfcf;
+    }
+}

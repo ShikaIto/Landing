@@ -1,0 +1,48 @@
+.training {
+    font-family: $ff-base;
+    display: flex;
+    max-width: $width-base;
+    padding: 150px 120px 120px;
+    justify-content: space-between;
+
+    &__container {
+        width: 460px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include font(700, 55px, 60px);
+        letter-spacing: -0.5px;
+        color: $color-black;
+        margin: 0 0 48px;
+    }
+
+    &__description {
+        @include font(400, 18px, 28px);
+        color: $color-black-light;
+        opacity: 0.7;
+        margin: 0 0 auto;
+    }
+
+    &__links {
+        @include list();
+        display: flex;
+    }
+
+    &__link {
+        text-decoration: none;
+        @include font(600, 18px, 28px);
+        color: $color-black;
+        margin: 0 30px 0 0;
+        transition: opacity 1s linear;
+    }
+
+    &__link:hover {
+        opacity: 0.75;
+    }
+
+    &__image {
+        @include size(580px, 460px, 0);
+    }
+}

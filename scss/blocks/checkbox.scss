@@ -1,0 +1,34 @@
+.checkbox {
+    display: flex;
+    justify-content: center;
+
+    &__label {
+        display: block;
+        @include size(44px, 24px, 20px);
+        background-color: #fff;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__sun {
+        margin: 0 22px 0 0;
+        @include size(28px, 28px, 0);
+    }
+
+    &__moon {
+        margin: 0 0 0 22px;
+        @include size(19.5px, 19.5px, 0);
+    }
+
+    &__input {
+        visibility: hidden;
+    }
+
+    &__ball {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        @include size(20px, 20px, 20px);
+        background-color: #24b47e;
+    }
+}
