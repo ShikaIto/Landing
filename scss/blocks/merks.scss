@@ -1,11 +1,18 @@
 .merks {
     font-family: $ff-base;
     padding: $indent 0 0 $indent;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "image title"
+        "image description";
+    column-gap: 80px;
     max-width: $width-base;
 
     &__image {
         @include size(650px, 460px, 0);
+        grid-area: image;
     }
 
     &__container {
@@ -21,12 +28,15 @@
         color: $color-black;
         width: 470px;
         margin: 0;
+        grid-area: title;
     }
 
     &__caption {
         display: flex;
         flex-direction: column;
         margin-block-end: 5px;
+        grid-area: description;
+        align-self: end;
     }
 
     &__name {

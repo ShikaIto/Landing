@@ -1,14 +1,17 @@
 .training {
     font-family: $ff-base;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: max-content, min-content;
+    grid-template-areas:
+        "description image"
+        "links image";
+    column-gap: 160px;
     max-width: $width-base;
     padding: 150px 120px 120px;
-    justify-content: space-between;
 
     &__container {
-        width: 460px;
-        display: flex;
-        flex-direction: column;
+        grid-area: description;
     }
 
     &__title {
@@ -28,6 +31,9 @@
     &__links {
         @include list();
         display: flex;
+        grid-area: links;
+        align-self: end;
+        margin-block-end: 3px;
     }
 
     &__link {
@@ -44,5 +50,6 @@
 
     &__image {
         @include size(580px, 460px, 0);
+        grid-area: image;
     }
 }

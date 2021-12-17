@@ -139,12 +139,18 @@
 .merks {
   font-family: "Inter", Arial, sans-serif;
   padding: 120px 0 0 120px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "image title" "image description";
+  -moz-column-gap: 80px;
+       column-gap: 80px;
   max-width: 1440px;
 }
 .merks__image {
   width: 650px;
   height: 460px;
+  grid-area: image;
 }
 .merks__container {
   display: flex;
@@ -161,12 +167,15 @@
   color: #151515;
   width: 470px;
   margin: 0;
+  grid-area: title;
 }
 .merks__caption {
   display: flex;
   flex-direction: column;
   -webkit-margin-after: 5px;
           margin-block-end: 5px;
+  grid-area: description;
+  align-self: end;
 }
 .merks__name {
   font-weight: 500;
@@ -315,15 +324,18 @@
 
 .training {
   font-family: "Inter", Arial, sans-serif;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: -webkit-max-content, -webkit-min-content;
+  grid-template-rows: max-content, min-content;
+  grid-template-areas: "description image" "links image";
+  -moz-column-gap: 160px;
+       column-gap: 160px;
   max-width: 1440px;
   padding: 150px 120px 120px;
-  justify-content: space-between;
 }
 .training__container {
-  width: 460px;
-  display: flex;
-  flex-direction: column;
+  grid-area: description;
 }
 .training__title {
   font-weight: 700;
@@ -346,6 +358,10 @@
   padding: 0;
   margin: 0;
   display: flex;
+  grid-area: links;
+  align-self: end;
+  -webkit-margin-after: 2px;
+          margin-block-end: 2px;
 }
 .training__link {
   text-decoration: none;
@@ -362,6 +378,7 @@
 .training__image {
   width: 580px;
   height: 460px;
+  grid-area: image;
 }
 
 .footer {

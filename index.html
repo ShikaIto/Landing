@@ -10,9 +10,9 @@
   <header class="header">
     <nav class="header__navigation">
       <ul class="header__list">
-          <li><a href="#" class="header__link">Покрытия и градиенты</a></li>
-          <li><a href="#" class="header__link">Велосипеды</a></li>
-          <li><a href="#" class="header__link">Тренировки</a></li>
+          <li><a href="#gallery" class="header__link">Покрытия и градиенты</a></li>
+          <li><a href="#bicycles" class="header__link">Велосипеды</a></li>
+          <li><a href="#training" class="header__link">Тренировки</a></li>
       </ul>
     </nav>
   </header>
@@ -39,16 +39,14 @@
 
     <section class="merks">
       <img src="./images/Merks.png" alt="велосипедист в дали" class="merks__image">
-      <div class="merks__container">
-        <h2 class="merks__title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
-        <div class="merks__caption">
-          <p class="merks__name">Эдди Меркс</p>
-          <p class="merks__job">Велогонщик</p>
-        </div>
+      <h2 class="merks__title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
+      <div class="merks__caption">
+        <p class="merks__name">Эдди Меркс</p>
+        <p class="merks__job">Велогонщик</p>
       </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <h2 class="gallery__title">Шоссе</h2>
       <p class="gallery__description">На шоссейном велосипеде можно ездить по асфальту на разных
          градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне,
@@ -75,7 +73,7 @@
       </button>
     </section>
 
-    <section class="bicycles">
+    <section class="bicycles" id="bicycles">
       <div class="bicycles__container">
         <h2 class="bicycles__title">Велосипеды</h2>
         <ul class="bicycles__surfaces">
@@ -100,17 +98,17 @@
       </div>
     </section>
 
-    <section class="training">
+    <section class="training" id="training">
       <div class="training__container">
         <h2 class="training__title">Тренировки</h2>
         <p class="training__description">Чтобы найти маршрут для тренировки можно
            воспользоваться сервисом Komoot, а записать эти тренировки поможет 
            приложение Strava, а также это приложение позволит построить тренировочный план.</p>
-        <ul class="training__links">
-          <li><a class="training__link" href="https://www.strava.com" target="_blank">Strava</a></li>
-          <li><a class="training__link" href=" https://www.komoot.com" target="_blank">Komoot</a></li>
-        </ul>
       </div>
+      <ul class="training__links">
+        <li><a class="training__link" href="https://www.strava.com" target="_blank">Strava</a></li>
+        <li><a class="training__link" href=" https://www.komoot.com" target="_blank">Komoot</a></li>
+      </ul>
       <img src="./images/training.png" alt="дорога" class="training__image">
     </section>
   </main>
