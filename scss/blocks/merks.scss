@@ -25,7 +25,7 @@
     &__title {
         @include font(600, 34px, 44px);
         letter-spacing: -0.5px;
-        color: $color-black;
+        color: var(--color-dark);
         width: 470px;
         margin: 0;
         grid-area: title;
@@ -41,13 +41,13 @@
 
     &__name {
         @include font(500, 20px, 32px);
-        color: $color-black;
+        color: var(--color-dark);
         margin: 0 0 6px;
     }
 
     &__job {
         @include font(400, 16px, 28px);
-        color: $color-black-light;
+        color: var(--color-light);
         margin: 0;
         opacity: 0.7;
     }

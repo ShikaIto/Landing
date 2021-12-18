@@ -1,5 +1,5 @@
 .header {
-    background-color: $color-base;
+    background-color: var(--color-bg-base);
     font-family: $ff-base;
     position: sticky;
     top: -1px;
@@ -22,7 +22,7 @@
     &__link {
         @include font(500, 14px, 18px);
         text-decoration: none;
-        color: $color-black;
+        color: var(--color-dark);
         padding-inline-end: 34px;
         transition: opacity 1s linear;
     }

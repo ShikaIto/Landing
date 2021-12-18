@@ -11,14 +11,14 @@
 
     &__title {
         @include font(700, 55px, 60px);
-        color: $color-black;
+        color: var(--color-dark);
         letter-spacing: -0.5px;
         margin: 80px 0 0 0;
     }
 
     &__description {
         @include font(400, 18px, 28px);
-        color: $color-black-light;
+        color: var(--color-light);
         margin: 50px 0;
         opacity: 0.7;
     }
@@ -50,13 +50,13 @@
 
     &__cannon {
         @include font(400, 18px, 18px);
-        color: $color-black-light;
+        color: var(--color-light);
         margin: 0 30px 0 0;
     }
 
     &__cannon-line {
         @include size(132px, 2px, 0);
-        background-color: #d7d4d4;
+        background-color: var(--color-line);
         align-self: center;
     }
 
@@ -83,7 +83,7 @@
         z-index: 1;
         padding: 20px 50px;
         border-radius: 20px;
-        background-color: $color-base;
+        background-color: #f4f4f4;
         box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
     }
 }

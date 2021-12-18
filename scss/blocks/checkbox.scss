@@ -5,7 +5,7 @@
     &__label {
         display: block;
         @include size(44px, 24px, 20px);
-        background-color: #fff;
+        background-color: var(--color-bg-checkbox);
         cursor: pointer;
         position: relative;
     }

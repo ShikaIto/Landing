@@ -1,7 +1,8 @@
 @import url("../vendor/normalize.css");
 @import url("../vendor/fonts/fonts.css");
+@import url("../pages/variables.css");
 .header {
-  background-color: #f4f4f4;
+  background-color: var(--color-bg-base);
   font-family: "Inter", Arial, sans-serif;
   position: -webkit-sticky;
   position: sticky;
@@ -28,7 +29,7 @@
   font-size: 14px;
   line-height: 18px;
   text-decoration: none;
-  color: #151515;
+  color: var(--color-dark);
   -webkit-padding-end: 34px;
           padding-inline-end: 34px;
   transition: opacity 1s linear;
@@ -38,7 +39,7 @@
 }
 
 .main {
-  background-color: #f4f4f4;
+  background-color: var(--color-bg-base);
 }
 
 .beginning {
@@ -56,7 +57,7 @@
   font-weight: 700;
   font-size: 55px;
   line-height: 60px;
-  color: #151515;
+  color: var(--color-dark);
   letter-spacing: -0.5px;
   margin: 80px 0 0 0;
 }
@@ -64,7 +65,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #222222;
+  color: var(--color-light);
   margin: 50px 0;
   opacity: 0.7;
 }
@@ -98,13 +99,13 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
-  color: #222222;
+  color: var(--color-light);
   margin: 0 30px 0 0;
 }
 .beginning__cannon-line {
   width: 132px;
   height: 2px;
-  background-color: #d7d4d4;
+  background-color: var(--color-line);
   align-self: center;
 }
 .beginning__image-container {
@@ -164,7 +165,7 @@
   font-size: 34px;
   line-height: 44px;
   letter-spacing: -0.5px;
-  color: #151515;
+  color: var(--color-dark);
   width: 470px;
   margin: 0;
   grid-area: title;
@@ -181,14 +182,14 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 32px;
-  color: #151515;
+  color: var(--color-dark);
   margin: 0 0 6px;
 }
 .merks__job {
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
-  color: #222222;
+  color: var(--color-light);
   margin: 0;
   opacity: 0.7;
 }
@@ -203,7 +204,7 @@
   font-size: 55px;
   line-height: 60px;
   letter-spacing: -0.5px;
-  color: #151515;
+  color: var(--color-dark);
   margin: 0;
 }
 .gallery__description {
@@ -212,7 +213,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #222222;
+  color: var(--color-light);
   opacity: 0.7;
 }
 .gallery__container {
@@ -270,7 +271,7 @@
   font-size: 55px;
   line-height: 60px;
   letter-spacing: -0.5px;
-  color: #151515;
+  color: var(--color-dark);
   margin: 0 0 120px 0;
 }
 .bicycles__surfaces {
@@ -284,7 +285,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #222222;
+  color: var(--color-light);
   opacity: 0.7;
   padding: 25px 0 0 0;
   margin: 0 0 0 40px;
@@ -294,7 +295,7 @@
 }
 .bicycles__surface_active {
   font-weight: 600;
-  color: #151515;
+  color: var(--color-dark);
   opacity: 1;
 }
 .bicycles__surface:hover {
@@ -312,13 +313,14 @@
   height: 340px;
   border-radius: 20px;
   box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
-  padding: 20px;
+  background-color: #f4f4f4;
+  border: 20px solid #f4f4f4;
 }
 .bicycles__caption {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  color: #151515;
+  color: var(--color-light);
   margin: 15px 0 0 5px;
 }
 
@@ -342,14 +344,14 @@
   font-size: 55px;
   line-height: 60px;
   letter-spacing: -0.5px;
-  color: #151515;
+  color: var(--color-dark);
   margin: 0 0 48px;
 }
 .training__description {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #222222;
+  color: var(--color-light);
   opacity: 0.7;
   margin: 0 0 auto;
 }
@@ -360,15 +362,15 @@
   display: flex;
   grid-area: links;
   align-self: end;
-  -webkit-margin-after: 2px;
-          margin-block-end: 2px;
+  -webkit-margin-after: 3px;
+          margin-block-end: 3px;
 }
 .training__link {
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  color: #151515;
+  color: var(--color-dark);
   margin: 0 30px 0 0;
   transition: opacity 1s linear;
 }
@@ -383,7 +385,7 @@
 
 .footer {
   font-family: "Inter", Arial, sans-serif;
-  background-color: #efefef;
+  background-color: var(--color-bg-footer);
   padding: 80px 120px 60px;
 }
 .footer__content {
@@ -396,7 +398,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: #151515;
+  color: var(--color-dark);
   margin: 0 0 48px;
 }
 .footer__form {
@@ -417,7 +419,7 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 28px;
-  color: #151515;
+  color: var(--color-dark);
 }
 .footer__input:hover {
   cursor: pointer;
@@ -439,7 +441,7 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 28px;
-  color: #151515;
+  color: var(--color-dark);
   display: none;
   cursor: pointer;
 }
@@ -451,7 +453,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #cfcfcf;
+  color: var(--color-copyright);
 }
 
 .checkbox {
@@ -463,7 +465,7 @@
   width: 44px;
   height: 24px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: var(--color-bg-checkbox);
   cursor: pointer;
   position: relative;
 }
