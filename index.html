@@ -77,24 +77,12 @@
       <div class="bicycles__container">
         <h2 class="bicycles__title">Велосипеды</h2>
         <ul class="bicycles__surfaces">
-          <li><button  type="button" class="bicycles__surface bicycles__surface_active">Шоссе</button></li>
-          <li><button type="button" class="bicycles__surface">Грэвел</button></li>
-          <li><button type="button" class="bicycles__surface">TT</button></li>
+          <li><button  type="button" class="bicycles__surface bicycles__surface_active" id="highway">Шоссе</button></li>
+          <li><button type="button" class="bicycles__surface" id="offRoad">Грэвел</button></li>
+          <li><button type="button" class="bicycles__surface" id="plain">TT</button></li>
         </ul>
       </div>
-      <div class="bicycles__container">
-        <figure class="bicycles__image-container">
-        <img src="./images/Caledonia-5.png" alt="велосипед" class="bicycles__image">
-        <figcaption class="bicycles__caption">Cervelo Caledonia-5</figcaption>
-      </figure>
-      <figure class="bicycles__image-container">
-        <img src="./images/Himod.png" alt="велосипед" class="bicycles__image">
-        <figcaption class="bicycles__caption">Cannondale Systemsix Himod</figcaption>
-      </figure>
-      <figure class="bicycles__image-container">
-        <img src="./images/SL-7.png" alt="велосипед" class="bicycles__image">
-        <figcaption class="bicycles__caption">Trek Domane SL-7</figcaption>
-      </figure>
+      <div class="bicycles__container" id="cards-container">
       </div>
     </section>
 
@@ -133,6 +121,13 @@
       </div>
     </div>
   </footer>
+
+  <template id="card-template">
+    <figure class="bicycles__image-container">
+      <img src="" alt="" class="bicycles__image">
+      <figcaption class="bicycles__caption"></figcaption>
+    </figure>
+  </template>
 
   <script src="./scripts/index.js"></script>
 </body>
