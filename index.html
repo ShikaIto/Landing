@@ -7,27 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-  <header class="header">
+ <header class="header">
     <nav class="header__navigation">
       <ul class="header__list">
           <li><a href="#gallery" class="header__link">Покрытия и градиенты</a></li>
           <li><a href="#bicycles" class="header__link">Велосипеды</a></li>
           <li><a href="#training" class="header__link">Тренировки</a></li>
       </ul>
+      <button type="button" class="header__menu"></button>
     </nav>
   </header>
   
   <main class="main">
-    <section class="beginning">
-      <div class="beginning__container">
-        <h1 class="beginning__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
-          <p class="beginning__description">Триатлонные старты, горные серпантины или грейвел заезды по живописным 
-            маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
-          <button class="beginning__button" type="button">Подробнее</button>
-          <div class="beginning__cannon-container">
-            <p class="beginning__cannon">Cannondale Systemsix</p>
-            <span class="beginning__cannon-line"></span>
-          </div>
+   <section class="beginning">
+      <h1 class="beginning__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
+      <p class="beginning__description">Триатлонные старты, горные серпантины или грейвел заезды по живописным 
+        маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+      <button class="beginning__button" type="button">Подробнее</button>
+      <div class="beginning__cannon-container">
+        <p class="beginning__cannon">Cannondale Systemsix</p>
+        <span class="beginning__cannon-line"></span>
       </div>
       <div class="beginning__image-container">
         <img src="./images/beginning.png" alt="дорога в лесу" class="beginning__image">
@@ -65,12 +64,14 @@
           <img src="" alt="иконка" class="gallery__icon">
         </div>
       </div>
-      <button type="button" class="gallery__button">
-        <img src="./images/back.svg" alt="назад" class="gallery__button-image" id="back-image">
-      </button>
-      <button type="button" class="gallery__button">
-        <img src="./images/next.svg" alt="вперед" class="gallery__button-image" id="next-image">
-      </button>
+      <div class="gallery__buttons">
+        <button type="button" class="gallery__button">
+          <img src="./images/back.svg" alt="назад" class="gallery__button-image" id="back-image">
+        </button>
+        <button type="button" class="gallery__button">
+          <img src="./images/next.svg" alt="вперед" class="gallery__button-image" id="next-image">
+        </button>
+      </div>
     </section>
 
     <section class="bicycles" id="bicycles">
@@ -81,18 +82,26 @@
           <li><button type="button" class="bicycles__surface" id="offRoad">Грэвел</button></li>
           <li><button type="button" class="bicycles__surface" id="plain">TT</button></li>
         </ul>
+        <select class="bicycles__select">
+          <option selected>Шоссе</option>
+          <option>Грэвел</option>
+          <option>TT</option>
+        </select>
       </div>
-      <div class="bicycles__container" id="cards-container">
+      <div class="bicycles__cards" id="cards-container">
+      </div>
+      <div class="bicycles__links">
+        <a href="#" class="bicycles__link"></a>
+        <a href="#" class="bicycles__link"></a>
+        <a href="#" class="bicycles__link"></a>
       </div>
     </section>
 
     <section class="training" id="training">
-      <div class="training__container">
-        <h2 class="training__title">Тренировки</h2>
-        <p class="training__description">Чтобы найти маршрут для тренировки можно
-           воспользоваться сервисом Komoot, а записать эти тренировки поможет 
-           приложение Strava, а также это приложение позволит построить тренировочный план.</p>
-      </div>
+      <h2 class="training__title">Тренировки</h2>
+      <p class="training__description">Чтобы найти маршрут для тренировки можно
+         воспользоваться сервисом Komoot, а записать эти тренировки поможет 
+         приложение Strava, а также это приложение позволит построить тренировочный план.</p>
       <ul class="training__links">
         <li><a class="training__link" href="https://www.strava.com" target="_blank">Strava</a></li>
         <li><a class="training__link" href=" https://www.komoot.com" target="_blank">Komoot</a></li>
@@ -118,6 +127,7 @@
           </label>
           <img src="./images/dark.svg" alt="луна" class="checkbox__moon">
         </div>
+        <div class="footer__logo"></div>
       </div>
     </div>
   </footer>

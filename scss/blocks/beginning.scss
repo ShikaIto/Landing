@@ -1,26 +1,33 @@
 .beginning {
     max-width: $width-base;
+    min-width: $width-mobile;
     padding-inline-start: $indent;
-    display: flex;
-    justify-content: space-between;
     font-family: $ff-base;
-
-    &__container {
-        width: 460px;
-    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, minmax(128px, max-content)) minmax(128px, 1fr);
+    column-gap: 250px;
+    row-gap: 40px;
+    grid-template-areas:
+        "title image"
+        "description image"
+        "button image"
+        "line image";
 
     &__title {
         @include font(700, 55px, 60px);
         color: var(--color-dark);
         letter-spacing: -0.5px;
-        margin: 80px 0 0 0;
+        margin: 84px 0 0;
+        grid-area: title;
     }
 
     &__description {
         @include font(400, 18px, 28px);
         color: var(--color-light);
-        margin: 50px 0;
+        margin: 0;
         opacity: 0.7;
+        grid-area: description;
     }
 
     &__button {
@@ -36,6 +43,7 @@
         background-position: 100% 0;
         background-size: 200% 100%;
         transition: all 0.3s ease-in;
+        grid-area: button;
     }
 
     &__button:hover {
@@ -45,7 +53,8 @@
 
     &__cannon-container {
         display: flex;
-        margin: 167px 0 0 0;
+        margin: 50px 0 0;
+        grid-area: line;
     }
 
     &__cannon {
@@ -57,11 +66,12 @@
     &__cannon-line {
         @include size(132px, 2px, 0);
         background-color: var(--color-line);
-        align-self: center;
+        margin-block-start: 5px;
     }
 
     &__image-container {
         position: relative;
+        grid-area: image;
     }
 
     &__image {
@@ -79,11 +89,71 @@
     &__sticky {
         position: sticky;
         top: 73px;
-        @include size(340px, 260px, 0);
+        @include size(340px, 260px, 20px);
         z-index: 1;
         padding: 20px 50px;
-        border-radius: 20px;
         background-color: #f4f4f4;
         box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+    }
+
+    @media screen and (max-width: 1340px) {
+        & {
+            padding: 40px 0 80px;
+            grid-template-columns: none;
+            grid-template-rows: repeat(4, max-content);
+            row-gap: 38px;
+            grid-template-areas:
+                "title"
+                "image"
+                "description"
+                "button";
+            border-bottom: 1px solid #e3e3e3;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        &__title {
+            @include font(700, 32px, 40px);
+            margin: 0;
+        }
+
+        &__image-container {
+            justify-self: end;
+        }
+
+        &__image {
+            @include size(254px, 348px, 0);
+            margin: 0;
+        }
+
+        &__sticky-container {
+            top: 123px;
+            left: -30px;
+            @include size(234px, 188px, 0);
+        }
+
+        &__sticky {
+            @include size(180px, 138px, 20px);
+            padding: 11px 26px;
+        }
+
+        &__description {
+            @include font(400, 12px, 18px);
+            width: 284px;
+        }
+
+        &__button {
+            @include size(284px, 46px, 4px);
+        }
+
+        &__cannon-container {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 321px) {
+        & {
+            margin: 0 18px;
+        }
     }
 }

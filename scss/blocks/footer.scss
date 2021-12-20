@@ -1,12 +1,14 @@
 .footer {
     font-family: $ff-base;
     background-color: var(--color-bg-footer);
-    padding: 80px 120px 60px;
+    width: 100%;
 
     &__content {
         max-width: $width-base;
+        min-width: $width-mobile;
         display: flex;
         flex-direction: column;
+        padding: 80px 120px 60px;
     }
 
     &__title {
@@ -65,5 +67,49 @@
     &__copyright {
         @include font(600, 14px, 20px);
         color: var(--color-copyright);
+    }
+
+    &__logo {
+        display: none;
+        background-image: url("../images/logo.svg");
+        @include size(38px, 38px, 0);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 1340px) {
+        &__content {
+            padding: 60px 0 25px;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        &__title {
+            @include font(600, 24px, 32px);
+            margin: 0 0 40px;
+        }
+
+        &__input {
+            @include size(260px, 50px, 4px);
+        }
+
+        &__form {
+            margin-block-end: 80px;
+            width: 284px;
+        }
+
+        &__checkbox {
+            display: none;
+        }
+
+        &__logo {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 321px) {
+        &__content {
+            margin: 0 18px;
+        }
     }
 }

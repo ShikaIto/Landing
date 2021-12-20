@@ -1,6 +1,6 @@
 .merks {
     font-family: $ff-base;
-    padding: $indent 0 0 $indent;
+    padding: 118px 0 0 $indent;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -9,6 +9,7 @@
         "image description";
     column-gap: 80px;
     max-width: $width-base;
+    min-width: $width-mobile;
 
     &__image {
         @include size(650px, 460px, 0);
@@ -50,5 +51,41 @@
         color: var(--color-light);
         margin: 0;
         opacity: 0.7;
+    }
+
+    @media screen and (max-width: 1340px) {
+        & {
+            padding: 20px 0 72px;
+            grid-template-columns: none;
+            grid-template-rows: repeat(3, max-content);
+            grid-template-areas: "image" "title" "description";
+            row-gap: 40px;
+            border-bottom: 1px solid #e3e3e3;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        &__image {
+            @include size(284px, 204px, 0);
+        }
+
+        &__title {
+            @include font(600, 23px, 29px);
+            width: 284px;
+        }
+
+        &__name {
+            @include font(500, 14px, 22px);
+        }
+
+        &__job {
+            @include font(400, 10px, 16px);
+        }
+    }
+
+    @media screen and (max-width: 321px) {
+        & {
+            margin: 0 18px;
+        }
     }
 }

@@ -30,4 +30,31 @@
     &__link:hover {
         opacity: 0.75;
     }
+
+    &__menu {
+        display: none;
+        background-image: url("../images/menu.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include size(22px, 19px, 0);
+        margin-inline-end: 18px;
+        align-self: center;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 1340px) {
+        &__navigation {
+            min-width: $width-mobile;
+        }
+
+        &__list {
+            display: none;
+        }
+
+        &__menu {
+            display: block;
+        }
+    }
 }
