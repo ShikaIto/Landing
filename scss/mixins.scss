@@ -12,7 +12,10 @@
 
 @mixin size($w, $h, $r) {
     width: $w;
-    height: $h;
+    @if $h != 0 {
+        height: $h;
+    }
+
     @if $r != 0 {
         border-radius: $r;
     }

@@ -17,13 +17,34 @@
       <button type="button" class="header__menu"></button>
     </nav>
   </header>
+
+  <div class="popup">
+    <div class="popup__content">
+      <button type="button" class="popup__close"></button>
+      <nav class="popup__menu">
+        <ul class="popup__list">
+          <li><a href="#gallery" class="popup__link">Покрытия и градиенты</a></li>
+          <li><a href="#bicycles" class="popup__link">Велосипеды</a></li>
+          <li><a href="#training" class="popup__link">Тренировки</a></li>
+        </ul>
+        <div class="popup__checkbox checkbox">
+          <img src="./images/sun.svg" alt="солнце" class="checkbox__sun">
+          <label class="checkbox__label">
+            <input type="checkbox" class="checkbox__input" name="theme">
+            <span class="checkbox__ball"></span>
+          </label>
+          <img src="./images/dark.svg" alt="луна" class="checkbox__moon">
+        </div>
+      </nav>
+    </div>
+  </div>
   
   <main class="main">
    <section class="beginning">
       <h1 class="beginning__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
       <p class="beginning__description">Триатлонные старты, горные серпантины или грейвел заезды по живописным 
         маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
-      <button class="beginning__button" type="button">Подробнее</button>
+      <a href="#gallery" class="beginning__button">Подробнее</a>
       <div class="beginning__cannon-container">
         <p class="beginning__cannon">Cannondale Systemsix</p>
         <span class="beginning__cannon-line"></span>
@@ -53,24 +74,20 @@
       <div class="gallery__container">
         <div class="gallery__image-container">
           <img src="./images/highway.png" alt="шоссе" class="gallery__image">
-          <img src="./images/highway-icon.svg" alt="иконка" class="gallery__icon">
+          <span class="gallery__icon"></span>
         </div>
         <div class="gallery__image-container">
           <img src="./images/OffRoad.png" alt="бездорожье" class="gallery__image">
-          <img src="" alt="иконка" class="gallery__icon">
+          <span class="gallery__icon"></span>
         </div>
         <div class="gallery__image-container">
           <img src="./images/plain.png" alt="равнина" class="gallery__image">
-          <img src="" alt="иконка" class="gallery__icon">
+          <span class="gallery__icon"></span>
         </div>
       </div>
       <div class="gallery__buttons">
-        <button type="button" class="gallery__button">
-          <img src="./images/back.svg" alt="назад" class="gallery__button-image" id="back-image">
-        </button>
-        <button type="button" class="gallery__button">
-          <img src="./images/next.svg" alt="вперед" class="gallery__button-image" id="next-image">
-        </button>
+        <button type="button" class="gallery__button" id="back"></button>
+        <button type="button" class="gallery__button" id="next"></button>
       </div>
     </section>
 
@@ -83,9 +100,9 @@
           <li><button type="button" class="bicycles__surface" id="plain">TT</button></li>
         </ul>
         <select class="bicycles__select">
-          <option selected>Шоссе</option>
-          <option>Грэвел</option>
-          <option>TT</option>
+          <option class="bicycles__option" selected value="highway">Шоссе</option>
+          <option class="bicycles__option" value="offRoad">Грэвел</option>
+          <option class="bicycles__option" value="plain">TT</option>
         </select>
       </div>
       <div class="bicycles__cards" id="cards-container">

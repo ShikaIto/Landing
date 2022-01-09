@@ -59,6 +59,13 @@ const btnHighway = document.querySelector("#highway");
 const btnOffRoad = document.querySelector("#offRoad");
 const btnPlain = document.querySelector("#plain");
 const cardsContainer = document.querySelector("#cards-container");
+const select = document.querySelector(".bicycles__select");
+const option = document.querySelectorAll(".bicycles__option");
+const popup = document.querySelector(".popup");
+
+function openClosePopup(popup) {
+  popup.classList.toggle("popup_active");
+}
 
 function createCard(name, link, image) {
   const cardTemplate = document.querySelector("#card-template").content;
@@ -76,8 +83,24 @@ function addCard(container, element) {
   container.append(element);
 }
 
+document.querySelector(".header__menu").addEventListener("click", () => {
+  openClosePopup(popup);
+});
+
+document.querySelector(".popup__close").addEventListener("click", () => {
+  openClosePopup(popup);
+});
+
 bikesHighway.forEach((elem) => {
   addCard(cardsContainer, createCard(elem.name, elem.link, elem.image));
+});
+
+select.addEventListener("change", (evt) => {
+  switch(evt.target.value) {
+    case "highway": btnHighway.click(); break;
+    case "offRoad": btnOffRoad.click(); break;
+    case "plain": btnPlain.click(); break;
+  }
 });
 
 btnHighway.addEventListener("click", () => {
@@ -90,6 +113,12 @@ btnHighway.addEventListener("click", () => {
   btnHighway.classList.add("bicycles__surface_active");
   btnOffRoad.classList.remove("bicycles__surface_active");
   btnPlain.classList.remove("bicycles__surface_active");
+  option.forEach((elem) => {
+    elem.removeAttribute("selected");
+    if (elem.value === "highway") {
+      elem.setAttribute("selected", true);
+    }
+  });
 });
 
 btnOffRoad.addEventListener("click", () => {
@@ -102,6 +131,12 @@ btnOffRoad.addEventListener("click", () => {
   btnHighway.classList.remove("bicycles__surface_active");
   btnOffRoad.classList.add("bicycles__surface_active");
   btnPlain.classList.remove("bicycles__surface_active");
+  option.forEach((elem) => {
+    elem.removeAttribute("selected");
+    if (elem.value === "offRoad") {
+      elem.setAttribute("selected", true);
+    }
+  });
 });
 
 btnPlain.addEventListener("click", () => {
@@ -114,6 +149,12 @@ btnPlain.addEventListener("click", () => {
   btnHighway.classList.remove("bicycles__surface_active");
   btnOffRoad.classList.remove("bicycles__surface_active");
   btnPlain.classList.add("bicycles__surface_active");
+  option.forEach((elem) => {
+    elem.removeAttribute("selected");
+    if (elem.value === "plain") {
+      elem.setAttribute("selected", true);
+    }
+  });
 });
 
 checkbox.addEventListener("click", () => {
@@ -125,8 +166,8 @@ checkbox.addEventListener("click", () => {
     document.documentElement.style.setProperty("--color-bg-checkbox","#545454");
     document.documentElement.style.setProperty("--color-bg-footer", "#2f2f2f");
     document.documentElement.style.setProperty("--color-copyright", "#565656");
-    document.querySelector("#back-image").src = "./images/back-dark.svg";
-    document.querySelector("#next-image").src = "./images/next-dark.svg";
+    document.querySelector("#back").style.backgroundImage = "url('./images/back-dark.svg')";
+    document.querySelector("#next").style.backgroundImage = "url('./images/next-dark.svg')";
     document.querySelector(".checkbox__ball").style.left = "23px";
     theme = "dark";
   } else {
@@ -137,8 +178,8 @@ checkbox.addEventListener("click", () => {
     document.documentElement.style.setProperty("--color-bg-checkbox", "#fff");
     document.documentElement.style.setProperty("--color-bg-footer", "#efefef");
     document.documentElement.style.setProperty("--color-copyright", "#cfcfcf");
-    document.querySelector("#back-image").src = "./images/back.svg";
-    document.querySelector("#next-image").src = "./images/next.svg";
+    document.querySelector("#back").style.backgroundImage = "url('./images/back.svg')";
+    document.querySelector("#next").style.backgroundImage = "url('./images/next.svg')";
     document.querySelector(".checkbox__ball").style.left = "0";
     theme = "light";
   }

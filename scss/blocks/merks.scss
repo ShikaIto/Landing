@@ -10,6 +10,7 @@
     column-gap: 80px;
     max-width: $width-base;
     min-width: $width-mobile;
+    margin: 0 auto;
 
     &__image {
         @include size(650px, 460px, 0);
@@ -62,7 +63,6 @@
             row-gap: 40px;
             border-bottom: 1px solid #e3e3e3;
             max-width: 320px;
-            margin: 0 auto;
         }
 
         &__image {

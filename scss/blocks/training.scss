@@ -12,6 +12,7 @@
     min-width: $width-mobile;
     padding: 150px 120px 120px;
     row-gap: 50px;
+    margin: 0 auto;
 
     &__title {
         @include font(700, 55px, 60px);
@@ -61,7 +62,6 @@
             grid-template-areas: "title" "image" "description" "links";
             row-gap: 40px;
             max-width: 320px;
-            margin: 0 auto;
         }
 
         &__title {

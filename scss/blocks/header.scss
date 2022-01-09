@@ -10,6 +10,7 @@
         min-height: 74px;
         display: flex;
         justify-content: flex-end;
+        margin: 0 auto;
     }
 
     &__list {
@@ -34,7 +35,7 @@
     &__menu {
         display: none;
         background-image: url("../images/menu.svg");
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         @include size(22px, 19px, 0);
         margin-inline-end: 18px;
