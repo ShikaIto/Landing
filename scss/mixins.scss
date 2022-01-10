@@ -1,0 +1,22 @@
+@mixin font($w, $s, $lh) {
+    font-weight: $w;
+    font-size: $s;
+    line-height: $lh;
+}
+
+@mixin list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin size($w, $h, $r) {
+    width: $w;
+    @if $h != 0 {
+        height: $h;
+    }
+
+    @if $r != 0 {
+        border-radius: $r;
+    }
+}

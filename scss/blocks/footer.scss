@@ -1,0 +1,115 @@
+.footer {
+    font-family: $ff-base;
+    background-color: var(--color-bg-footer);
+    width: 100%;
+
+    &__content {
+        max-width: $width-base;
+        min-width: $width-mobile;
+        display: flex;
+        flex-direction: column;
+        padding: 80px 120px 60px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        width: 229px;
+        @include font(600, 24px, 32px);
+        color: var(--color-dark);
+        margin: 0 0 48px;
+    }
+
+    &__form {
+        margin-block-end: 85px;
+        width: 360px;
+        position: relative;
+    }
+
+    &__input {
+        @include size(340px, 50px, 4px);
+        font-family: inherit;
+        border: 1px solid rgba(199, 199, 199, 0.5);
+        background: transparent;
+        padding-inline-start: 20px;
+        @include font(500, 13px, 28px);
+        color: var(--color-dark);
+    }
+
+    &__input:hover {
+        cursor: pointer;
+    }
+    &__input:focus {
+        outline: 1px solid rgba(199, 199, 199, 0.5);
+    }
+
+    &__input:focus ~ &__submit {
+        display: block;
+    }
+
+    &__submit {
+        position: absolute;
+        top: 11px;
+        right: 11px;
+        padding: 0;
+        background: none;
+        border: none;
+        font-family: inherit;
+        @include font(500, 13px, 28px);
+        color: var(--color-dark);
+        display: none;
+        cursor: pointer;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        @include font(600, 14px, 20px);
+        color: var(--color-copyright);
+    }
+
+    &__logo {
+        display: none;
+        background-image: url("../images/logo.svg");
+        @include size(38px, 38px, 0);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 1340px) {
+        &__content {
+            padding: 60px 0 25px;
+            max-width: 320px;
+        }
+
+        &__title {
+            @include font(600, 24px, 32px);
+            margin: 0 0 40px;
+        }
+
+        &__input {
+            @include size(260px, 50px, 4px);
+        }
+
+        &__form {
+            margin-block-end: 80px;
+            width: 284px;
+        }
+
+        &__checkbox {
+            display: none;
+        }
+
+        &__logo {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 321px) {
+        &__content {
+            margin: 0 18px;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.popup {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include size(100%, 100%, 0);
+    z-index: 20;
+    background-color: var(--color-bg-base);
+    transition: all 0.5s linear;
+    font-family: $ff-base;
+
+    &_active {
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.5s linear;
+    }
+
+    &__content {
+        width: 320px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__close {
+        background-image: url("../images/close.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        @include size(23px, 23px, 0);
+        align-self: end;
+        margin: 27px 20px 100px 0;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__list {
+        @include list();
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link {
+        display: block;
+        @include font(500, 18px, 18px);
+        text-decoration: none;
+        color: var(--color-dark);
+        text-align: center;
+        margin: 0 0 32px;
+    }
+
+    &__checkbox {
+        align-self: center;
+        margin-block-end: 40px;
+    }
+}

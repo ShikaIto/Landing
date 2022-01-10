@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Document</title>
+</head>
+<body>
+ <header class="header">
+    <nav class="header__navigation">
+      <ul class="header__list">
+          <li><a href="#gallery" class="header__link">Покрытия и градиенты</a></li>
+          <li><a href="#bicycles" class="header__link">Велосипеды</a></li>
+          <li><a href="#training" class="header__link">Тренировки</a></li>
+      </ul>
+      <button type="button" class="header__menu"></button>
+    </nav>
+  </header>
+
+  <div class="popup">
+    <div class="popup__content">
+      <button type="button" class="popup__close"></button>
+      <nav class="popup__menu">
+        <ul class="popup__list">
+          <li><a href="#gallery" class="popup__link">Покрытия и градиенты</a></li>
+          <li><a href="#bicycles" class="popup__link">Велосипеды</a></li>
+          <li><a href="#training" class="popup__link">Тренировки</a></li>
+        </ul>
+        <div class="popup__checkbox checkbox">
+          <img src="./images/sun.svg" alt="солнце" class="checkbox__sun">
+          <label class="checkbox__label">
+            <input type="checkbox" class="checkbox__input" name="theme">
+            <span class="checkbox__ball"></span>
+          </label>
+          <img src="./images/dark.svg" alt="луна" class="checkbox__moon">
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <main class="main">
+   <section class="beginning">
+      <h1 class="beginning__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
+      <p class="beginning__description">Триатлонные старты, горные серпантины или грейвел заезды по живописным 
+        маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+      <a href="#gallery" class="beginning__button">Подробнее</a>
+      <div class="beginning__cannon-container">
+        <p class="beginning__cannon">Cannondale Systemsix</p>
+        <span class="beginning__cannon-line"></span>
+      </div>
+      <div class="beginning__image-container">
+        <img src="./images/beginning.png" alt="дорога в лесу" class="beginning__image">
+        <div class="beginning__sticky-container">
+          <img src="./images/cannon.png" alt="велосипед" class="beginning__sticky">
+        </div>
+      </div>
+    </section>
+
+    <section class="merks">
+      <img src="./images/Merks.png" alt="велосипедист в дали" class="merks__image">
+      <h2 class="merks__title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
+      <div class="merks__caption">
+        <p class="merks__name">Эдди Меркс</p>
+        <p class="merks__job">Велогонщик</p>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <h2 class="gallery__title">Шоссе</h2>
+      <p class="gallery__description">На шоссейном велосипеде можно ездить по асфальту на разных
+         градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне,
+          но тренироваться можно и самостоятельно.</p>
+      <div class="gallery__container">
+        <div class="gallery__image-container">
+          <img src="./images/highway.png" alt="шоссе" class="gallery__image">
+          <span class="gallery__icon"></span>
+        </div>
+        <div class="gallery__image-container">
+          <img src="./images/OffRoad.png" alt="бездорожье" class="gallery__image">
+          <span class="gallery__icon"></span>
+        </div>
+        <div class="gallery__image-container">
+          <img src="./images/plain.png" alt="равнина" class="gallery__image">
+          <span class="gallery__icon"></span>
+        </div>
+      </div>
+      <div class="gallery__buttons">
+        <button type="button" class="gallery__button" id="back"></button>
+        <button type="button" class="gallery__button" id="next"></button>
+      </div>
+    </section>
+
+    <section class="bicycles" id="bicycles">
+      <div class="bicycles__container">
+        <h2 class="bicycles__title">Велосипеды</h2>
+        <ul class="bicycles__surfaces">
+          <li><button  type="button" class="bicycles__surface bicycles__surface_active" id="highway">Шоссе</button></li>
+          <li><button type="button" class="bicycles__surface" id="offRoad">Грэвел</button></li>
+          <li><button type="button" class="bicycles__surface" id="plain">TT</button></li>
+        </ul>
+        <select class="bicycles__select">
+          <option class="bicycles__option" selected value="highway">Шоссе</option>
+          <option class="bicycles__option" value="offRoad">Грэвел</option>
+          <option class="bicycles__option" value="plain">TT</option>
+        </select>
+      </div>
+      <div class="bicycles__cards" id="cards-container">
+      </div>
+      <div class="bicycles__links">
+        <a href="#" class="bicycles__link"></a>
+        <a href="#" class="bicycles__link"></a>
+        <a href="#" class="bicycles__link"></a>
+      </div>
+    </section>
+
+    <section class="training" id="training">
+      <h2 class="training__title">Тренировки</h2>
+      <p class="training__description">Чтобы найти маршрут для тренировки можно
+         воспользоваться сервисом Komoot, а записать эти тренировки поможет 
+         приложение Strava, а также это приложение позволит построить тренировочный план.</p>
+      <ul class="training__links">
+        <li><a class="training__link" href="https://www.strava.com" target="_blank">Strava</a></li>
+        <li><a class="training__link" href=" https://www.komoot.com" target="_blank">Komoot</a></li>
+      </ul>
+      <img src="./images/training.png" alt="дорога" class="training__image">
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__content">
+      <h3 class="footer__title">Подпишитесь на рассылку —</h3>
+      <form class="footer__form" name="formEmail">
+        <input type="email" name="email" class="footer__input" placeholder="ваш e-mail">
+        <button type="submit" name="submit" class="footer__submit">ok</button>
+      </form>
+      <div class="footer__container">
+        <p class="footer__copyright">© Road Club 2021</p>
+        <div class="footer__checkbox checkbox">
+          <img src="./images/sun.svg" alt="солнце" class="checkbox__sun">
+          <label class="checkbox__label">
+            <input type="checkbox" class="checkbox__input" name="theme">
+            <span class="checkbox__ball"></span>
+          </label>
+          <img src="./images/dark.svg" alt="луна" class="checkbox__moon">
+        </div>
+        <div class="footer__logo"></div>
+      </div>
+    </div>
+  </footer>
+
+  <template id="card-template">
+    <figure class="bicycles__image-container">
+      <img src="" alt="" class="bicycles__image">
+      <figcaption class="bicycles__caption"></figcaption>
+    </figure>
+  </template>
+
+  <script src="./scripts/index.js"></script>
+</body>
+</html>

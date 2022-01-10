@@ -1,0 +1,90 @@
+.training {
+    font-family: $ff-base;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(60px, max-content)) minmax(60px, 1fr);
+    grid-template-areas:
+        "title image"
+        "description image"
+        "links image";
+    column-gap: 160px;
+    max-width: $width-base;
+    min-width: $width-mobile;
+    padding: 150px 120px 120px;
+    row-gap: 50px;
+    margin: 0 auto;
+
+    &__title {
+        @include font(700, 55px, 60px);
+        letter-spacing: -0.5px;
+        color: var(--color-dark);
+        margin: 0;
+        grid-area: title;
+    }
+
+    &__description {
+        @include font(400, 18px, 28px);
+        color: var(--color-light);
+        opacity: 0.7;
+        margin: 0;
+        grid-area: description;
+    }
+
+    &__links {
+        @include list();
+        display: flex;
+        grid-area: links;
+        align-self: end;
+    }
+
+    &__link {
+        text-decoration: none;
+        @include font(600, 18px, 28px);
+        color: var(--color-dark);
+        margin: 0 30px 0 0;
+        transition: opacity 1s linear;
+    }
+
+    &__link:hover {
+        opacity: 0.75;
+    }
+
+    &__image {
+        @include size(580px, 460px, 0);
+        grid-area: image;
+    }
+
+    @media screen and (max-width: 1340px) {
+        & {
+            padding: 40px 0 60px;
+            grid-template-columns: none;
+            grid-template-rows: repeat(4, max-content);
+            grid-template-areas: "title" "image" "description" "links";
+            row-gap: 40px;
+            max-width: 320px;
+        }
+
+        &__title {
+            @include font(700, 32px, 40px);
+        }
+
+        &__image {
+            @include size(284px, 225px, 0);
+        }
+
+        &__description {
+            @include font(400, 12px, 18px);
+            width: 284px;
+        }
+
+        &__link {
+            @include font(600, 14px, 20px);
+        }
+    }
+
+    @media screen and (max-width: 321px) {
+        & {
+            margin: 0 18px;
+        }
+    }
+}

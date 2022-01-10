@@ -1,0 +1,91 @@
+.merks {
+    font-family: $ff-base;
+    padding: 118px 0 0 $indent;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "image title"
+        "image description";
+    column-gap: 80px;
+    max-width: $width-base;
+    min-width: $width-mobile;
+    margin: 0 auto;
+
+    &__image {
+        @include size(650px, 460px, 0);
+        grid-area: image;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-inline-start: 80px;
+    }
+
+    &__title {
+        @include font(600, 34px, 44px);
+        letter-spacing: -0.5px;
+        color: var(--color-dark);
+        width: 470px;
+        margin: 0;
+        grid-area: title;
+    }
+
+    &__caption {
+        display: flex;
+        flex-direction: column;
+        margin-block-end: 5px;
+        grid-area: description;
+        align-self: end;
+    }
+
+    &__name {
+        @include font(500, 20px, 32px);
+        color: var(--color-dark);
+        margin: 0 0 6px;
+    }
+
+    &__job {
+        @include font(400, 16px, 28px);
+        color: var(--color-light);
+        margin: 0;
+        opacity: 0.7;
+    }
+
+    @media screen and (max-width: 1340px) {
+        & {
+            padding: 20px 0 72px;
+            grid-template-columns: none;
+            grid-template-rows: repeat(3, max-content);
+            grid-template-areas: "image" "title" "description";
+            row-gap: 40px;
+            border-bottom: 1px solid #e3e3e3;
+            max-width: 320px;
+        }
+
+        &__image {
+            @include size(284px, 204px, 0);
+        }
+
+        &__title {
+            @include font(600, 23px, 29px);
+            width: 284px;
+        }
+
+        &__name {
+            @include font(500, 14px, 22px);
+        }
+
+        &__job {
+            @include font(400, 10px, 16px);
+        }
+    }
+
+    @media screen and (max-width: 321px) {
+        & {
+            margin: 0 18px;
+        }
+    }
+}

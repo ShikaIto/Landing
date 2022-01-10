@@ -1,0 +1,148 @@
+.gallery {
+    font-family: $ff-base;
+    max-width: $width-base;
+    min-width: $width-mobile;
+    padding: $indent 0 0 $indent;
+    display: grid;
+    grid-template-rows: repeat(4, max-content);
+    grid-template-areas: "title" "description" "gallery" "button";
+    row-gap: 50px;
+    margin: 0 auto;
+
+    &__title {
+        @include font(700, 55px, 60px);
+        letter-spacing: -0.5px;
+        color: var(--color-dark);
+        margin: 0;
+        grid-area: title;
+    }
+
+    &__description {
+        margin: 0;
+        width: 460px;
+        @include font(400, 18px, 28px);
+        color: var(--color-light);
+        opacity: 0.7;
+        grid-area: description;
+    }
+
+    &__container {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        margin-block-start: 30px;
+        grid-area: gallery;
+    }
+
+    &__image-container {
+        @include size(650px, 400px, 0);
+        margin-inline-end: 40px;
+        position: relative;
+    }
+
+    &__image {
+        @include size(650px, 400px, 0);
+    }
+
+    &__icon {
+        position: absolute;
+        left: 0;
+        bottom: 16px;
+        @include size(100px, 40px, 0);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__buttons {
+        grid-area: button;
+    }
+
+    &__button {
+        @include size(50px, 50px, 50px);
+        display: inline-block;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0 16px 0 0;
+        transition: opacity 1s linear;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__button:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+
+    &__button:first-child {
+        background-image: url("../images/back.svg");
+    }
+
+    &__button:last-child {
+        background-image: url("../images/next.svg");
+    }
+
+    @media screen and (max-width: 1340px) {
+        & {
+            padding: 40px 0 40px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "title button"
+                "gallery gallery"
+                "description description";
+            row-gap: 40px;
+            border-bottom: 1px solid #e3e3e3;
+            max-width: 320px;
+        }
+
+        &__container {
+            margin: 0;
+        }
+
+        &__title {
+            @include font(700, 32px, 40px);
+        }
+
+        &__image-container {
+            @include size(284px, 175px, 0);
+        }
+
+        &__image {
+            @include size(284px, 175px, 0);
+        }
+
+        &__icon {
+            @include size(70px, 28px, 0);
+            bottom: 14px;
+        }
+
+        &__description {
+            @include font(400, 12px, 18px);
+            width: 284px;
+        }
+
+        &__buttons {
+            align-self: end;
+            justify-self: end;
+        }
+
+        &__button {
+            @include size(24px, 24px, 30px);
+            margin: 0 8px 7px 0;
+        }
+
+        &__button:last-of-type {
+            margin: 0 0 7px;
+        }
+
+        &__button-image {
+            @include size(24px, 24px, 30px);
+        }
+    }
+
+    @media screen and (max-width: 321px) {
+        & {
+            margin: 0 18px;
+        }
+    }
+}
